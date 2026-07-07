@@ -1,1 +1,1 @@
-# infoysis Training
+# infosys Training
