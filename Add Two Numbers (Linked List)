@@ -1,0 +1,15 @@
+public static Node add(Node a, Node b) {
+    Node d = new Node(0), t = d;
+    int c = 0;
+
+    while (a != null || b != null || c != 0) {
+        int sum = c;
+        if (a != null) { sum += a.data; a = a.next; }
+        if (b != null) { sum += b.data; b = b.next; }
+
+        t.next = new Node(sum % 10);
+        c = sum / 10;
+        t = t.next;
+    }
+    return d.next;
+}
